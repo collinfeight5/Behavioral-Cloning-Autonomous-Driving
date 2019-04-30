@@ -89,5 +89,5 @@ After the collection process, I had around 24,000 data points.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I found that using a batch size of 120, 7 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I found that using a batch size of 120, 4 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
