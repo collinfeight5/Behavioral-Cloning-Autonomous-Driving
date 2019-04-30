@@ -1,6 +1,6 @@
-# Behavorial Cloning Script
-# Written By Collin Feight
-
+#### Goal for this project was to create/train a CNN that would enable a car to autonomously drive in a simulator
+#### The approach that was used was to gather data from operating the car in the simulator, and use that data to train the CNN
+#### Written by Collin Feight
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -97,5 +97,5 @@ def train_model(X_train, Y_train):
     model.save('model_preprocessed.h5')
     return None
 
-
+# Function call to train model given input data
 train_model(x_train, y_train)
