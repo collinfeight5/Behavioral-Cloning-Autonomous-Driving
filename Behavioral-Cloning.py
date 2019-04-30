@@ -10,7 +10,7 @@ from sklearn.utils import shuffle
 from keras.models import Sequential
 from keras.layers import Conv2D, Cropping2D, Dense, Dropout, Flatten, Lambda
 
-
+# Data_path changes per new training folder being used
 data_path = 'data/'
 drive_log = pd.read_csv(data_path+'driving_log.csv')
 
@@ -89,11 +89,9 @@ def train_model(X_train, Y_train):
     model.add(Dense(1))
     print('Training the model')
     model.compile(optimizer='adam', loss='mse')
-    # Refresh weights every time new training happens
     #model.reset_states()
-    # Used to save weights when training on new data
-    #model.save_weights('model_weights.h5')
-    #model.load_weights('model_weights.h5')
+    # train model using additional data gathered in simulator
+    #model.load('model_preprocessed.h5')
     # Assign Data
     model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, validation_split=.2, shuffle=True)
     model.save('model_preprocessed.h5')
