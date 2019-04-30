@@ -62,10 +62,11 @@ epochs = 7
 activation_type = 'elu'
 dropout = .3
 
+
+# Max pooling causes data to crash?
 def train_model(X_train, Y_train):
     model = Sequential()
     # Crop
-    # Max pooling causes data to crash?
     model.add(Cropping2D(cropping=((60, 25), (0, 0)), input_shape=(160, 320, 3)))
     # Normalize
     model.add(Lambda(lambda x: (x / 255) - .5))
@@ -86,12 +87,13 @@ def train_model(X_train, Y_train):
     model.add(Dense(50, activation=activation_type))
     model.add(Dense(10, activation=activation_type))
     model.add(Dense(1))
-
     print('Training the model')
-
     model.compile(optimizer='adam', loss='mse')
     # Refresh weights every time new training happens
-    model.reset_states()
+    #model.reset_states()
+    # Used to save weights when training on new data
+    #model.save_weights('model_weights.h5')
+    #model.load_weights('model_weights.h5')
     # Assign Data
     model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, validation_split=.2, shuffle=True)
     model.save('model_preprocessed.h5')
