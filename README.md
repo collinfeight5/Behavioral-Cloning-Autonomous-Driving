@@ -5,9 +5,9 @@
 [image2]: ./Output_Images/track1.png "Track1"
 [image3]: ./Output_Images/track2.png "Track2"
 
-**Behavioral Cloning Project**
+### Behavioral Cloning Project
 
-### Here is a link to the video result. Note the view of the video is from the viewpoint of the hood, not top-down as it was in training: [Video_Output](./Output_Video/Autonomous_Mode_Result.mp4)
+#### Here is a link to the video result. Note the view of the video is from the viewpoint of the hood, not top-down as it was in training: [Video_Output](./Output_Video/Autonomous_Mode_Result.mp4)
 
 The goals of this project were the following:
 * Use the simulator provided by Udacity to collect data of good driving behavior
@@ -69,5 +69,7 @@ After the collection process, I had around 24,000 data points.
 
 Finally, I randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I found that using a batch size of 120, 7 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. I found that using a batch size of 120, 7 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary. 
+
+The final result was a car that could drive autonomously around the tracks very smoothly, and my CNN achieved a loss value of .0160 after training had been complete. 
 
