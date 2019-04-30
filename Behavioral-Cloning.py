@@ -54,10 +54,10 @@ for i, row in drive_log.iterrows():
         x_train.append(image)
         y_train.append(angle)
 
-x_train = shuffle(np.array(x_train))
-y_train = shuffle(np.array(y_train))
+x_train = np.array(x_train)
+y_train = np.array(y_train)
 
-batch = 128
+batch_size = 120
 epochs = 7
 activation_type = 'elu'
 dropout = .3
@@ -91,10 +91,9 @@ def train_model(X_train, Y_train):
 
     model.compile(optimizer='adam', loss='mse')
     # Refresh weights every time new training happens
-    model.save_weights('pre_saved_weights.h5')
-    model.load_weights('pre_saved_weights.h5')
+    model.reset_states()
     # Assign Data
-    model.fit(X_train, Y_train, batch_size=batch, epochs=epochs, validation_split=.2)
+    model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, validation_split=.2, shuffle=True)
     model.save('model_preprocessed.h5')
     return None
 
