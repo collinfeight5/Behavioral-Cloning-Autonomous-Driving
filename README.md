@@ -14,8 +14,8 @@ The goals of this project were the following:
 [//]: # (Image References)
 
 [image1]: ./Output_Images/Nvidia_Behavioral_Cloning_Architecture.png "Architecture"
-[image2]: ./Output_Images/Track1.png "Track1"
-[image3]: ./Output_Images/Track2.png "Track2"
+[image2]: ./Output_Images/track1.png "Track1"
+[image3]: ./Output_Images/track2.png "Track2"
 
 
 
