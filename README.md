@@ -14,6 +14,10 @@ The goals of this project were the following:
 [//]: # (Image References)
 
 [image1]: ./Output_Images/Nvidia_Behavioral_Cloning_Architecture.png "Architecture"
+[image2]: ./Output_Images/Track1.png "Track1"
+[image3]: ./Output_Images/Track2.png "Track2"
+
+
 
 
 ### Files Submitted & Code Quality
@@ -70,9 +74,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes:
-
-Here is a visualization of the architecture.
+The final model architecture consisted of a convolution neural network with the following layers and layer sizes:
 
 ![alt text][image1]
 
@@ -80,7 +82,13 @@ Here is a visualization of the architecture.
 
 To capture good driving behavior, I recorded laps on track one using center lane driving method. I also drove the revesre direction and collected data to when the car was near the edge of the road and needed to be corrected towards the center. 
 
+![alt text][image2]
+
+
 Then I repeated this process on track two in order to get more data points.
+
+![alt text][image3]
+
 
 To augment the data sat, I also flipped images and angles when the steering was not zero. 
 
@@ -89,5 +97,5 @@ After the collection process, I had around 24,000 data points.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I found that using a batch size of 120, 4 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I found that using a batch size of 120, 7 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
