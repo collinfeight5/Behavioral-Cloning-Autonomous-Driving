@@ -58,7 +58,7 @@ x_train = shuffle(np.array(x_train))
 y_train = shuffle(np.array(y_train))
 
 batch = 128
-epochs = 2
+epochs = 7
 activation_type = 'elu'
 dropout = .3
 
