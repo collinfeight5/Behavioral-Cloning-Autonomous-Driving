@@ -64,7 +64,7 @@ Training data was chosen to keep the vehicle driving on the road. I used a combi
 
 My training strategy consisted of first training the model based off the sample data that was provided to us by Udacity. After I had run the simulation using this data, I identified areas the car seemed to struggle with, such as when the car was near the edge of the road. I then went back and collected data using the simulator for these struggle areas for the car. Another thing I found very helpful was using all three cameras. Finding the correct angle correction was a bit challenging, but the using all three cameras to train the model was extremely useful. 
 
-Before running the simulation on the new model I developed using new data, I made srue that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
+Before running the simulation on the new model I developed using new data, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
@@ -89,5 +89,5 @@ After the collection process, I had around 24,000 data points.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I found that using a batch size of 120, 7 epochs, and a dropout percentage of .3 produced sound results. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
