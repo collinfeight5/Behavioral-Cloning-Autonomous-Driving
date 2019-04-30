@@ -7,7 +7,7 @@
 
 ### Behavioral Cloning Project
 
-#### Here is a link to the video result. Note the view of the video is from the viewpoint of the hood, not top-down as it was in training: [Video_Output](./Output_Video/Autonomous_Mode_Result.mp4)
+#### Here is a link to the video result. Note the viewpoint from the video is from the hood, not top-down as it was in training: [Video_Output](./Output_Video/Autonomous_Mode_Result.mp4)
 
 The goals of this project were the following:
 * Use the simulator provided by Udacity to collect data of good driving behavior
