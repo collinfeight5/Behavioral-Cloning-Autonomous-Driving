@@ -1,16 +1,19 @@
-**Behavioral Cloning Project**
-
-The goals of this project were the following:
-* Use the simulator provided by Udacity to collect data of good driving behavior
-* Build, a convolution neural network using Keras that predicts steering angles from images
-* Train and validate the model with a training and validation set
-* Test that the model successfully drives around track one without leaving the road
 
 [//]: # (Image References)
 
 [image1]: ./Output_Images/Nvidia_Behavioral_Cloning_Architecture.png "Architecture"
 [image2]: ./Output_Images/track1.png "Track1"
 [image3]: ./Output_Images/track2.png "Track2"
+
+**Behavioral Cloning Project**
+
+### Here is a link to the video result. Note the view of the video is from the viewpoint of the hood, not top-down as it was in training: [Video_Output](./Output_Video/Autonomous_Mode_Result.mp4)
+
+The goals of this project were the following:
+* Use the simulator provided by Udacity to collect data of good driving behavior
+* Build, a convolution neural network using Keras that predicts steering angles from images
+* Train and validate the model with a training and validation set
+* Test that the model successfully drives around track one without leaving the road
 
 
 
