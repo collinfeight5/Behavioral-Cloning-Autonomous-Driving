@@ -21,10 +21,7 @@ My project includes the following files:
 * Behavioral_Cloning.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * video.py was used for generating an ouptut video based on the "frames" captured during the car driving autonomously
-* model_preprocessed.h5 contains a trained CNN
-
-
-The Behavioral-Cloning.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works. 
+* model_preprocessed.h5 contains a trained CNN 
 
 ### Model Architecture and Training Strategy
 
@@ -33,9 +30,7 @@ The paper can be found ([here](https://arxiv.org/pdf/1604.07316v1.pdf))
 
 The model contains dropout layers in order to reduce overfitting. Along with this, I also only considered a select amount of data that had a steering angle of 0. This also seemed to help prevent overfitting and improved the models preformance.  
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
-
-The model used an adam optimizer, so the learning rate was not tuned manually.
+To get the best results, the model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. I also used an adam optimizer, so the learning rate was not tuned manually.
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road and driving on both tracks to collect data. 
 
