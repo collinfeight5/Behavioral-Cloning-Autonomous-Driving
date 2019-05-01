@@ -13,9 +13,9 @@
 
 The goals of this project were the following:
 * Use the simulator provided by Udacity to collect data of good driving behavior by manually driving the car
-* Build a convolution neural network using Keras that predicts steering angles from images gathered during the step above 
+* Build a convolution Neural Network using Keras to predict steering angles from data/images gathered during the step above 
 * Train and validate the model with a training and validation set
-* Test that the car in the simulator successfully drives around track one without leaving the road using the developed model
+* Test that the car in the simulator successfully drives smoothly on the road using the developed CNN model
 
 
 
@@ -43,14 +43,10 @@ After identifying areas of concern, I went back and collected data using the sim
 
 ![alt text][image3]
 
+To get the best results, the model was trained and validated on seperate subsets of the data sets to help validate that the model was not overfitting. After the data collection process, I had around 24,000 data points, where the data was stored using a csv file and a folder containing the different images associated with the data points. The KEY was for the model to learn to associate an image, or driving instance, with the correct steering angle that should be applied. 
 
-
-
-
-
-
-To get the best results, the model was trained and validated on seperate subsets of the data sets to help validate that the model was not overfitting. After the data collection process, I had around 24,000 data points. The data was stored using a csv file and an Image folder. A very small sample of data stored in a csv file is shown below. Note that each image listed under the different cameras is stored in the Image folder.
+A very small sample of data stored in a csv file is shown below. Note that each image listed under the different cameras in the csv file is stored in the Image folder generated from collecting data.
 ![alt text][image4]
 
 Finally, I randomly shuffled the data set and put 20% of the data into a validation set. Before running the simulation on the new model I developed using new data, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road, and I had a training loss of .0133 and validation loss of AHHHHH.
+At the end of the process, the vehicle was able to drive successfully drive autonomously around the track without leaving the road, and I had a training loss of .0133 and validation loss of .017.
