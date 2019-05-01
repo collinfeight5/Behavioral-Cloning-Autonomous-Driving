@@ -13,6 +13,12 @@ from keras.layers import Conv2D, Cropping2D, Dense, Dropout, Flatten, Lambda
 # Data_path changes per new training folder being used
 data_path = 'data/'
 drive_log = pd.read_csv(data_path+'driving_log.csv')
+# Below for plotting purposes
+# plt.hist(drive_log['steering'], bins=100)
+# plt.title(r'Steering Angle Values')
+# plt.xlabel('Steering Angle Degree')
+# plt.ylabel('Count')
+# plt.show()
 
 # Only use 20% of Data when steering is 0, to prevent over-fitting
 drive_log = drive_log[drive_log['steering'] != 0].append(drive_log[drive_log['steering'] == 0].sample(frac=0.2))
