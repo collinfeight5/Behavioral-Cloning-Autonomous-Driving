@@ -5,6 +5,8 @@
 [image2]: ./Output_Images/track1.png "Track1"
 [image3]: ./Output_Images/track2.png "Track2"
 [image4]: ./Output_Images/data_sample.png "Data"
+[image5]: ./Output_Images/Steering_Angle_data.png "Histogram"
+
 
 
 ### Behavioral Cloning Project
@@ -27,12 +29,14 @@ My project includes the following files:
 
 ### Model Architecture and Training Strategy
 
-The architecture model that I was used was based of the Nvidia research paper called "End-To-End Learning For Self-Driving Cars". 
-The paper can be found ([here](https://arxiv.org/pdf/1604.07316v1.pdf))
-
-The model contains a dropout layer in order to reduce overfitting. Along with this, I also only considered a select amount of data that had a steering angle of 0. This also seemed to help prevent overfitting and improved the models preformance. The detailed layout of the model can be seen in the Behavioral-Cloning.py script, but the general architecture is seen in image below.
-
+The architecture model/process that I was used was based of the Nvidia research paper called "End-To-End Learning For Self-Driving Cars". I found this article very informative and helpful when tackling this project.
+The paper can be found [here](https://arxiv.org/pdf/1604.07316v1.pdf), while the general architecture layout can also be seen in the image below.
 ![alt text][image1]
+
+
+I also only considered a select amount of data that had a steering angle of 0. This was due to the vast majority of the data containing a steering angle of zero, as can be seen in the histogram below. This helped to prevent overfitting and improved the models preformance. The detailed layout of the model and pre-processing of the data can be seen in the Behavioral-Cloning.py script.
+
+![alt text][image5]
 
 
 My training strategy consisted of first training the CNN model based off the sample data that was provided to us by Udacity. To see how it preformed, I applied this model to the car and observed how it preformed in autonomous mode. I identified areas the car seemed to struggle with, such as when the car was near the edge of the road. It was not able to drive back towards the center, but rather continued off of the track. 
