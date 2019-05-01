@@ -50,5 +50,5 @@ I also only considered a select amount of data that had a steering angle of 0. T
 
 ![alt text][image5]
 
-Finally, I randomly shuffled the data set and put 20% of the data into a validation set. Before running the simulation on the new model I developed using new data, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
+Finally, I randomly shuffled the data set and put 20% of the data into a validation set. Before applying the model to the car in the simulation, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
 At the end of the process, the vehicle was able to drive successfully drive autonomously around the track without leaving the road, and I had a training loss of .0133 and validation loss of .017.
