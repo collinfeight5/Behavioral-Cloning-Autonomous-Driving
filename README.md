@@ -33,12 +33,6 @@ The architecture model/process that I was used was based of the Nvidia research 
 The paper can be found [here](https://arxiv.org/pdf/1604.07316v1.pdf), while the general architecture layout can also be seen in the image below.
 ![alt text][image1]
 
-
-I also only considered a select amount of data that had a steering angle of 0. This was due to the vast majority of the data containing a steering angle of zero, as can be seen in the histogram below. This helped to prevent overfitting and improved the models preformance. The detailed layout of the model and pre-processing of the data can be seen in the Behavioral-Cloning.py script.
-
-![alt text][image5]
-
-
 My training strategy consisted of first training the CNN model based off the sample data that was provided to us by Udacity. To see how it preformed, I applied this model to the car and observed how it preformed in autonomous mode. I identified areas the car seemed to struggle with, such as when the car was near the edge of the road. It was not able to drive back towards the center, but rather continued off of the track. 
 
 After identifying areas of concern, I went back and collected data using the simulator for the "struggle" areas for the car. Along with these areas of concern, to capture good driving behavior, I recorded laps on track one using center lane driving method. I also drove the revesre direction and collected data to when the car was near the edge of the road and needed to be corrected towards the center.  The images below shows examples of what operating the car in the simulator to collect data looked like on track one and two respectively. 
@@ -51,6 +45,10 @@ To get the best results, the model was trained and validated on seperate subsets
 
 A very small sample of data stored in a csv file is shown below. Note that each image listed under the different cameras in the csv file is stored in the Image folder generated from collecting data.
 ![alt text][image4]
+
+I also only considered a select amount of data that had a steering angle of 0. This was due to the vast majority of the data containing a steering angle of zero, as can be seen in the histogram below. This helped to prevent overfitting and improved the models preformance. The detailed layout of the model and pre-processing of the data can be seen in the Behavioral-Cloning.py script.
+
+![alt text][image5]
 
 Finally, I randomly shuffled the data set and put 20% of the data into a validation set. Before running the simulation on the new model I developed using new data, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
 At the end of the process, the vehicle was able to drive successfully drive autonomously around the track without leaving the road, and I had a training loss of .0133 and validation loss of .017.
