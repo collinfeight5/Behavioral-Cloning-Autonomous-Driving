@@ -35,16 +35,22 @@ The model contains a dropout layer in order to reduce overfitting. Along with th
 ![alt text][image1]
 
 
-My training strategy consisted of first training the CNN model based off the sample data that was provided to us by Udacity. I then applied this model to the car and observed how it preformed in autonomous mode. I then identified areas the car seemed to struggle with, such as when the car was near the edge of the road it did not do the job of coming back towards the center, but rather continued off of the track. After identifying areas of concern, I went back and collected data using the simulator for the "struggle" areas for the car. Along with these areas of concern, to capture good driving behavior, I recorded laps on track one using center lane driving method. I also drove the revesre direction and collected data to when the car was near the edge of the road and needed to be corrected towards the center.  The images below shows examples of what operating the car in the simulator to collect data looked like on track one and two respectively. 
+My training strategy consisted of first training the CNN model based off the sample data that was provided to us by Udacity. To see how it preformed, I applied this model to the car and observed how it preformed in autonomous mode. I identified areas the car seemed to struggle with, such as when the car was near the edge of the road. It was not able to drive back towards the center, but rather continued off of the track. 
+
+After identifying areas of concern, I went back and collected data using the simulator for the "struggle" areas for the car. Along with these areas of concern, to capture good driving behavior, I recorded laps on track one using center lane driving method. I also drove the revesre direction and collected data to when the car was near the edge of the road and needed to be corrected towards the center.  The images below shows examples of what operating the car in the simulator to collect data looked like on track one and two respectively. 
 
 ![alt text][image2]
 
 ![alt text][image3]
 
-The data was stored using a csv file and an Image folder. A very small sample of data stored in a csv file is shown below. Note that each image listed under the different cameras is stored in the Image folder.
+
+
+
+
+
+
+To get the best results, the model was trained and validated on seperate subsets of the data sets to help validate that the model was not overfitting. After the data collection process, I had around 24,000 data points. The data was stored using a csv file and an Image folder. A very small sample of data stored in a csv file is shown below. Note that each image listed under the different cameras is stored in the Image folder.
 ![alt text][image4]
 
-
-To get the best results, the model was trained and validated on seperate subsets of the data sets to help validate that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. I also used an adam optimizer, so the learning rate was not tuned manually. After the collection process, I had around 24,000 data points. Finally, I randomly shuffled the data set and put 20% of the data into a validation set. Before running the simulation on the new model I developed using new data, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
-
+Finally, I randomly shuffled the data set and put 20% of the data into a validation set. Before running the simulation on the new model I developed using new data, I made sure that the test data and validation data that I was using obtained low loss values, inidcating the model was preforming well. 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road, and I had a training loss of .0133 and validation loss of AHHHHH.
