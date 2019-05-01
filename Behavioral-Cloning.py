@@ -87,7 +87,7 @@ def train_model(X_train, Y_train):
     model.compile(optimizer='adam', loss='mse')
     #model.reset_states()
     # train model using additional data gathered in simulator
-    #model.load('model_preprocessed.h5')
+    #model.load_weights('model_preprocessed.h5')
     # Assign Data
     history = model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, validation_split=.2, shuffle=True)
     model.save('model_preprocessed.h5')
