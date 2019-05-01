@@ -72,16 +72,12 @@ def train_model(X_train, Y_train):
     model.add(Lambda(lambda x: (x / 255) - .5))
     # Start Convolutional NN
     model.add(Conv2D(24, (5, 5), strides=(2, 2), activation=activation_type))
-    model.add(Dropout(dropout))
     model.add(Conv2D(36, (5, 5), strides=(2, 2), activation=activation_type))
-    model.add(Dropout(dropout))
     model.add(Conv2D(48, (5, 5), strides=(2, 2), activation=activation_type))
-    model.add(Dropout(dropout))
     model.add(Conv2D(64, (3, 3), activation=activation_type))
-    model.add(Dropout(dropout))
     model.add(Conv2D(64, (3, 3), activation=activation_type))
-    model.add(Dropout(dropout))
     model.add(Flatten())
+	model.add(Dropout(dropout))
     model.add(Dense(1164, activation=activation_type))
     model.add(Dense(100, activation=activation_type))
     model.add(Dense(50, activation=activation_type))
@@ -93,9 +89,21 @@ def train_model(X_train, Y_train):
     # train model using additional data gathered in simulator
     #model.load('model_preprocessed.h5')
     # Assign Data
-    model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, validation_split=.2, shuffle=True)
+    history = model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, validation_split=.2, shuffle=True)
     model.save('model_preprocessed.h5')
     return None
 
 # Function call to train model given input data
 train_model(x_train, y_train)
+
+# Used for plotting training/validation results
+#history = train_model(x_train, y_train)
+#print(history.history.keys())
+#plt.plot(history.history['loss'])
+#plt.plot(history.history['val_loss'])
+#plt.title('model accuracy')
+#plt.ylabel('loss')
+#plt.xlabel('epoch')
+#plt.legend(['train', 'test'], loc='upper left')
+#plt.show()
+
