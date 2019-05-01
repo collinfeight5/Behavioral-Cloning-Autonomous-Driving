@@ -33,9 +33,9 @@ The architecture model/process that I was used was based of the Nvidia research 
 The paper can be found [here](https://arxiv.org/pdf/1604.07316v1.pdf), while the general architecture layout can also be seen in the image below.
 ![alt text][image1]
 
-My training strategy consisted of first training the CNN model based off the sample data that was provided to us by Udacity. To see how it preformed, I applied this model to the car and observed how it preformed in autonomous mode. I identified areas the car seemed to struggle with, such as when the car was near the edge of the road. It was not able to drive back towards the center, but rather continued off of the track. 
+My training strategy consisted of first training the CNN model based off the sample data that was provided to us by Udacity. To see how it preformed, I applied this model to the car and observed how it preformed in autonomous mode. I identified areas the car seemed to struggle with, such as when the car was near the edge of the road, it was not able to drive back towards the center, but rather continued off of the track. 
 
-After identifying areas of concern, I went back and collected data using the simulator for the "struggle" areas for the car. Along with these areas of concern, to capture good driving behavior, I recorded laps on track one using center lane driving method. I also drove the revesre direction and collected data to when the car was near the edge of the road and needed to be corrected towards the center.  The images below shows examples of what operating the car in the simulator to collect data looked like on track one and two respectively. 
+After identifying areas of concern, I went back and collected data using the simulator for the "struggle" areas for the car. Along with these areas of concern, to capture good driving behavior, I recorded laps on track one using center lane driving method. I also drove the revesre direction and collected data to when the car was near the edge of the road and needed to be corrected towards the center. The images below shows examples of what operating the car in the simulator to collect data looked like on track one and two respectively. 
 
 ![alt text][image2]
 
