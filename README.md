@@ -41,7 +41,7 @@ After identifying areas of concern, I went back and collected data using the sim
 
 ![alt text][image3]
 
-To get the best results, the model was trained and validated on seperate subsets of the data sets to help validate that the model was not overfitting. After the data collection process, I had around 24,000 data points, where the data was stored using a csv file and a folder containing the different images associated with the data points. The KEY was for the model to learn to associate an image, or driving instance, with the correct steering angle that should be applied. 
+To get the best results, the model was trained and validated on seperate subsets of the data to help validate that the model was not overfitting. After the data collection process, I had around 24,000 data points, where the data was stored using a csv file and a folder containing the different images associated with the data points. The KEY was for the model to learn to associate an image, or driving instance, with the correct steering angle that should be applied. 
 
 A very small sample of data stored in a csv file is shown below. Note that each image listed under the different cameras in the csv file is stored in the Image folder generated from collecting data.
 ![alt text][image4]
