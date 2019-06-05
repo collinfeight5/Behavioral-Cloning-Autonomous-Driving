@@ -39,13 +39,13 @@ def get_data(line):
 
     # left image
     left_img = io.imread(data_path + line['left'].strip())
-    left_ang = center_ang + .205 * np.random.random()
+    left_ang = center_ang + .205 #* np.random.random()
     left_ang = min(left_ang, 1)
     data_dict['left_camera'] = (left_img, left_ang)
 
     # right image
     right_img = io.imread(data_path + line['right'].strip())
-    right_ang = center_ang - .205 * np.random.random()
+    right_ang = center_ang - .205 # * np.random.random()
     right_ang = max(right_ang, -1)
     data_dict['right_camera'] = (right_img, right_ang)
 
